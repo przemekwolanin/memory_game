@@ -1,6 +1,6 @@
 const cardsColor =  ['red','red','green','green','blue','blue','brown','brown','yellow','yellow','grey','grey','cadetblue','cadetblue','violet','violet','lightgreen','lightgreen'];
 
-let cards = document.querySelectorAll('div');
+let cards = document.querySelectorAll('.crd');
 cards = [...cards]; /// Konwersja NodListy na Array
 
 const startTime = new Date().getTime();
@@ -59,4 +59,32 @@ const init = function() {
   },2000);
 
 }
-init();
+const startGame = function() {
+  var gameZone = document.querySelector('.game-zone');
+  var startScreen = document.querySelector('.start-screen');
+  if(gameZone.classList.contains('game-stopped')) {
+    // Set classes for game zone
+    gameZone.classList.remove('game-stopped');
+    gameZone.classList.add('game-started');
+    startScreen.classList.remove('game-started');
+    startScreen.classList.add('game-stopped');
+    init();
+  } else {
+    gameZone.classList.remove('game-started');
+    gameZone.classList.add('game-stopped');
+  }
+}
+const getRules = function() {
+  var rulesBox = document.querySelector('.game-rules');
+  if(rulesBox.classList.contains('closed')) {
+    rulesBox.classList.remove('closed');
+    rulesBox.classList.add('opened');
+  } else {
+    rulesBox.classList.remove('opened');
+    rulesBox.classList.add('closed');
+  }
+}
+
+document.querySelector('.start-game-btn').addEventListener('click', startGame);
+document.querySelector('.start-rules-btn').addEventListener('click', getRules);
+//init();

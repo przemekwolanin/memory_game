@@ -8,24 +8,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  <div class="start-screen">
+    <div class="info-wrap">
+      <div class="logo">
+        <img src="images/logo.png" alt="Memory Game Logo">
+      </div>
+      <button class="button start-game-btn" type="button">Start game</button>
+      <button class="button start-rules-btn" type="button">Instructions</button>
+      <div class="game-rules closed">
+        <h2>Game rules:</h2>
+        <ul>
+          <li>The objective is to collect the most pairs of cards.</li>
+          <li>You can only open two of the cards.</li>
+          <li>If the cards are identical they gone grey and no longers stays in stock.</li>
+          <li>When you have collected all pairs the game stops and display your score (time to resolve);</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="game-zone game-stopped">
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+    <div class="crd"></div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
